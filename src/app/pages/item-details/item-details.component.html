@@ -1,18 +1,41 @@
 <body>
-<div class="card mb-12" style="margin-top: 30px;">
+<div class="card mb-12" style="padding: 50px;background:  #e5dedc;">
     <div class="row g-0">
       <div class="col-md-5">
+        <mat-card-header>
+       
+          <div mat-card-avatar>
+               <!-- Aquí va la foto de perfil del Vendedor -->
+  
+            <img src="assets/Persona.jpg" width="150px" height="180px" alt="Mi Imagen" style="margin-right: 40px; margin-bottom: 10px;"> 
+            <mat-card-title style="font-weight: bolder;font-size: 30px;">Diego</mat-card-title>
+            <mat-card-subtitle style="font-weight: bolder;font-size: 30px;"> Mendoza</mat-card-subtitle>
+          </div>
+  
+           <!-- Aquí nombre y Apellido del vendedor -->
+
+        </mat-card-header>
         <img src="assets/Parrilla.jpg" class="img-fluid rounded-start" alt="...">
       </div>
       <div class="col-md-7">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <br>
+          <h5 class="card-title">{{ this.selectedItem?.name }}</h5>
           <p class="card-text"> 
-            name: {{ this.selectedItem?.name }} <br>
-            description: {{ this.selectedItem?.description }} <br>
-            price: {{ this.selectedItem?.price }} <br>
+
+             <p >{{ this.selectedItem?.description }} </p><br>
+            <h5 style=" position: absolute;
+            bottom: 80px; /* Ajusta la distancia desde abajo según tus necesidades */
+            left: 50%; /* Centra horizontalmente el botón */
+            transform: translateX(-50%); /* Ajusta para centrar exactamente el botón */">$ {{ this.selectedItem?.price }} CLP </h5>
+
+            <button mat-raised-button style="background-color: #e5421d;color: rgb(236, 229, 229); position: absolute;
+            bottom: 40px; /* Ajusta la distancia desde abajo según tus necesidades */
+            left: 50%; /* Centra horizontalmente el botón */
+            transform: translateX(-50%); /* Ajusta para centrar exactamente el botón */">Comprar</button>
         </div>
       </div>
     </div>
 </div>
+
 </body>

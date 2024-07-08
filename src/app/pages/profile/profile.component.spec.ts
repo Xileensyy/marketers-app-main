@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {MatCardModule} from '@angular/material/card';
 
 import { ProfileComponent } from './profile.component';
 
